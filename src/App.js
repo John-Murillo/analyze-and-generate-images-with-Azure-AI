@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { analyzeImage } from './api'; // Importar la función analyzeImage
+import { analyzeImage } from './azure-image-analysis'; // Importar la función analyzeImage
 
 
 function App() {
@@ -46,8 +46,8 @@ function App() {
         type="text"
         value={imageUrl}
         onChange={e => setImageUrl(e.target.value)}
-        placeholder="Escribe la dirección URL de la imagen"
-      />
+        placeholder="Escribe la dirección URL de la imagen"/>
+        
       <button className="button" onClick={handleAnalyzeImage}>Analizar imagen</button>
       <button className="button" onClick={handleGenerateImage}>Generar imagen</button>
       {processing && <p>Procesando...</p>} // Mostrar indicador de procesamiento si está en progreso
